@@ -1,0 +1,169 @@
+// compileCompressed: ../min_css/$1.min.css
+@import "./variables.scss";
+
+.main-container {
+  padding-top: 0; //jQueryで調整
+}
+
+.main1 {
+  position: relative;
+  height: 0; //jQueryで調整
+}
+
+.bgimg {
+  background-size: cover;
+  background-position: center;
+  transition: 1s;
+}
+
+.background-img {
+  background-color: black;
+  opacity: 0.5;
+}
+
+.top-contents {
+  position: absolute;
+  top: 47.5%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transform: translateY(-50%);
+  color: white;
+  width: 50%;
+  z-index: 50;
+  @include tab{
+    width: 70%;
+  };
+  @include sp{
+    width: 70%;
+  };
+  h1 {
+    font-size: 24px;
+    padding-bottom: 30px;
+    @include tab{
+      font-size: 32px;
+      padding-bottom: 10px;
+    };
+    @include sp{
+      font-size: 24px;
+      padding-bottom: 30px;
+    };
+  }
+  p {
+    font-size: 18px;
+    padding-bottom: 30px;
+    @include tab{
+      font-size: 20px;
+      padding-bottom: 20px;
+    };
+    @include sp{
+      display: none;
+    };
+  }
+  ol, ul {
+    color: white;
+  }
+  a {
+    color: white;
+  }
+}
+
+.points {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  padding-bottom: 30px;
+  @include tab{
+    padding-bottom: 20px;
+  };
+  @include sp{
+    display: none;
+  };
+  ol {
+    margin: auto;
+    list-style-type: circle;
+    li {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin: 0px 30px;
+      border: 2px solid white;
+      border-radius: 20px;
+      @include tab{
+        width: 12px;
+        height: 12px;
+        margin: 0px 60px;
+      };
+      @include sp{
+        width: 18px;
+        height: 18px;
+        margin: 0px 30px;
+      };
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: calc(50% - 32px);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 64px;
+  @include tab{
+    top: 80%;
+  };
+  @include sp{
+    top: 85%;
+  };
+  a {
+    color: white;
+    font-size: 64px;
+  }
+  .left::before {
+    content: " ";
+    width: 64px;
+    height:64px;
+    background-image: url(../images/arrow-left.svg);
+    background-size: contain;
+    position: absolute;
+    left: 10%;
+    transition: 0.4s;
+    @include tab{
+      left: 20%;
+      width: 100px;
+      height: 100px;
+    };
+    @include sp{
+      left: 20%;
+      width: 80px;
+      height: 80px;
+    };
+  }
+
+  .right::before {
+    content: " ";
+    width: 64px;
+    height: 64px;
+    background-image: url(../images/arrow-right.svg);
+    background-size: contain;
+    position: absolute;
+    right: 10%;
+    @include tab{
+      right: 20%;
+      width: 100px;
+      height: 100px;
+    };
+    @include sp{
+      right: 20%;
+      width: 80px;
+      height: 80px;
+    };
+  }
+}

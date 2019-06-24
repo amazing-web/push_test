@@ -1,0 +1,96 @@
+// compileCompressed: ../min_css/$1.min.css
+@import "./variables.scss";
+
+.button-hide {
+  display: none;
+  position: absolute;
+  top: 52px;
+  z-index: 999;
+  background-color: #161616;
+  width: 100%;
+  text-align: center;
+  a {
+    color: white;
+  }
+}
+.menu-hide {
+  @include sp{
+    display: none;
+  };
+}
+.menu-icon {
+  display: none;
+  @include sp{
+    display: block;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    opacity: 0.7;
+    padding-top: 13px;
+  };
+}
+
+.bar-container {
+  width: 100%;
+  background-color: #161616;
+  z-index: 999;
+  @include sp{
+    display: flex;
+  };
+}
+
+.bar1 {
+  font-weight: bolder;
+  background-color: #dddddd;
+  text-align: center;
+  @include sp{
+    display: inline-block;
+    width: calc(100% - 50px);
+  };
+  a {
+    color: black;
+    display: inline;
+    font-size: 36px;
+    @include tab{
+
+    };
+    @include sp{
+      font-size: 24px;
+      padding-left: 10px;
+    };
+  }
+  a:hover {
+    border: none;
+  }
+}
+
+.bar2 {
+  @include sp{
+    display: inline-block;
+    width: 50px;
+  };
+  a {
+    color: white;
+  }
+  ul {
+    box-sizing: border-box;
+    padding: 10px 100px;
+    margin: auto;
+    max-width: 1024px;
+    text-align: center;
+    li {
+      display: inline-block;
+      font-size: 20px;
+      width: calc((100% / 6) - 10px);
+      text-align: center;
+      @include tab {
+        width: calc((100% / 3) - 10px);
+        font-size: 32px;
+      };
+      @include sp {
+        width: calc((100% / 3) - 10px);
+        font-size: 20px;
+      };
+    }
+  }
+}

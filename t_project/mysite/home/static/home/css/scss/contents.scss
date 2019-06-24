@@ -1,0 +1,116 @@
+// compileCompressed: ../min_css/$1.min.css
+@import "./variables.scss";
+
+.main2 {
+  max-width: 85%;
+  margin: auto;
+  padding-top: 50px;
+  text-align: center;
+  color: rgb(80, 80, 80);
+  a {
+    color: rgb(80, 80, 80);
+  }
+  @include sp {
+    max-width: 100%;
+    padding-top: 30px;
+  };
+}
+.main-contents {
+  width: calc(95% * 2 / 3);
+  display: inline-block;
+  margin-right: 4%;
+  margin-bottom: 50px;
+  @include sp{
+    display: block;
+    width: 100%;
+    margin: 0px;
+  };
+}
+.sub-contents {
+  width: calc(95% / 3);
+  display: inline-block;
+  vertical-align: top;
+  @include sp{
+    display: block;
+    width: 100%;
+    margin-top: 60px;
+  };
+}
+
+.categorytheme {
+  text-align: left;
+  margin-bottom: 30px;
+  h1 {
+    color: black;
+    border-bottom: 2px solid #00cbee;
+    @include sp {
+      margin-left: 20px;
+    };
+  }
+}
+
+.title, .intro{
+  padding: 30px;
+  p {
+    margin-bottom: 30px;
+  }
+}
+.thumbnail {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+.thumbnail:after {
+  content: "";
+  display: block;
+  padding-bottom: 50%;
+}
+
+.article {
+  margin-bottom: 50px;
+  background-color: white;
+}
+
+.profile {
+  padding: 20px;
+  background-color: white;
+  width: calc(100% - 40px);
+  margin-bottom: 50px;
+  p {
+    text-align: justify;
+    font-size: 12px;
+    padding: 0px 10px;
+  }
+}
+.face-icon {
+  width: 80%;
+  background-size: cover;
+  margin: auto;
+}
+.face-icon:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.pagetransition {
+  padding-left: 30px;
+  @include sp {
+    padding-left: 0px;
+  };
+}
+.copyright {
+  width: 100%;
+  background-color: #dddddd;
+  a {
+    color: black;
+  }
+  a:hover {
+    border: none;
+  }
+  p {
+    font-size: 12px;
+    padding: 20px 15px;
+    text-align: center;
+  }
+}
